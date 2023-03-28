@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
+import Header from "../../components/Header"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +14,19 @@ export default function Home() {
       </Head>
 
       
-      <h1 className="p-10 text-red-500">MJ Asprec!</h1>
+      <Header />
+
+      {/* HERO */}
+
+      {/* ABOUT */}
+
+      {/* EXPERIENCE */}
+
+      {/* SKILLS */}
+
+      {/* PROJECTS */}
+
+      {/* CONTACT ME */}
     </>
   )
 }
