@@ -14,12 +14,12 @@ export default function Header({}: Props) {
           scale: 0.5,
         }}
         animate={{
-          x: 0,
+          x: [150, -200, 50, -50, 0],
           opacity: 1,
           scale: 1,
         }}
         transition={{
-          duration: 1.5,
+          duration: 3.5,
         }}
         className='flex flex-row items-center'
       >
