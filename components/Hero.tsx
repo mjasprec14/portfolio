@@ -10,12 +10,11 @@ type Props = {};
 export default function Hero({}: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Hi, The Name's MJ Asprec",
-      'I was on Hiatus..',
-      "But, now I'm back..",
-      "I'm back hungrier",
-      'with more motivation',
-      "let's go!",
+      'MJ Asprec',
+      'Love',
+      'Dream',
+      'Persevere',
+      'Challenge',
       '<ShowMeTheMoney/>',
     ],
     loop: true,
