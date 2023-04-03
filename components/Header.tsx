@@ -19,7 +19,7 @@ export default function Header({}: Props) {
           scale: 1,
         }}
         transition={{
-          duration: 3.5,
+          duration: 3,
         }}
         className='flex flex-row items-center'
       >
