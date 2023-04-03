@@ -22,6 +22,22 @@ export default function About({}: Props) {
         viewport={{ once: true }}
         src={AboutImg.src}
       />
+
+      <div className='space-y-10 md:px-10'>
+        <h4 className='text-4xl font-semibold'>
+          Yes, I am wearing{' '}
+          <span className='underline decoration-[#F7AB0A]'>sunglasses</span> in
+          the middle of the night.<span className='pt-2'>😎</span>
+        </h4>
+
+        <p className='text-base'>
+          I&apos;m a Software Engineer with 2 years of experience in Front-end
+          development using HTML, CSS, SCSS, Bootstrap, Javascript, React,
+          Typescript, and Material-UI, writing tests Unit tests, and Automated
+          tests using Cypress. I helped create new App features and fixed
+          existing UI and front-end issues.
+        </p>
+      </div>
     </div>
   );
 }
