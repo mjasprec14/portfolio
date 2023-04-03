@@ -12,9 +12,10 @@ export default function Hero({}: Props) {
     words: [
       'MJ Asprec',
       'Love',
-      'Dream',
-      'Persevere',
       'Challenge',
+      'Dream',
+      'Grind',
+      'Coffee',
       '<ShowMeTheMoney/>',
     ],
     loop: true,
