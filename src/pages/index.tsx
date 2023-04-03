@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header, Hero } from '@/components';
+import { Header, Hero, About } from '@/components';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,12 +23,17 @@ export default function Home() {
 
       <section
         id='hero'
-        className='snap-center'
+        className='snap-start'
       >
         <Hero />
       </section>
 
-      {/* ABOUT */}
+      <section
+        id='about'
+        className='snap-center'
+      >
+        <About />
+      </section>
 
       {/* EXPERIENCE */}
 
