@@ -6,6 +6,7 @@ import {
   WorkExperience,
   Skills,
   Projects,
+  ContactMe,
 } from '@/components';
 import { Inter } from 'next/font/google';
 
@@ -63,7 +64,12 @@ export default function Home() {
         <Projects />
       </section>
 
-      {/* CONTACT ME */}
+      <section
+        id='contact'
+        className='snap-start'
+      >
+        <ContactMe />
+      </section>
     </div>
   );
 }
