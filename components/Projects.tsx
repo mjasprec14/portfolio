@@ -19,7 +19,7 @@ export default function Projects({}: Props) {
         Projects
       </h3>
 
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+      <div className='relative w-9/12 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
         {projects.map((project, idx) => (
           <div
             key={idx}
