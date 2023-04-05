@@ -25,7 +25,7 @@ export default function About({}: Props) {
 
       <div className='space-y-10 md:px-10'>
         <h4 className='text-4xl font-semibold'>
-          Yes, I am wearing{' '}
+          Yes, I wear{' '}
           <span className='underline decoration-[#F7AB0A]'>sunglasses</span> in
           the middle of the night.<span className='pt-2'>😎</span>
         </h4>
