@@ -34,8 +34,8 @@ export default function About({}: Props) {
           I&apos;m a Software Engineer with 2 years of experience in Front-end
           development using HTML, CSS, SCSS, Bootstrap, Javascript, React,
           Typescript, and Material-UI, writing tests Unit tests, and Automated
-          tests using Cypress. I helped create new App features and fixed
-          existing UI and front-end issues.
+          tests using Cypress. I helped in creating new App features, fixed
+          existing UI issues and other front-end related things.
         </p>
       </div>
     </div>
