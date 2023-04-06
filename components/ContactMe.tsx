@@ -5,9 +5,29 @@ import {
   EnvelopeOpenIcon,
 } from '@heroicons/react/24/solid';
 
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 type Props = {};
 
 export default function ContactMe({}: Props) {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
+
+  console.log(errors);
+
   return (
     <div className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
       <h3 className='absolute top-24 text-2xl text-gray-500 uppercase tracking-[20px]'>
@@ -37,14 +57,19 @@ export default function ContactMe({}: Props) {
           </div>
         </div>
 
-        <form className='flex flex-col space-y-2 w-fit mx-auto'>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className='flex flex-col space-y-2 w-fit mx-auto'
+        >
           <div className='flex space-x-2'>
             <input
+              {...register('name', { required: true })}
               placeholder='Name'
               className='contactInput'
               type='text'
             />
             <input
+              {...register('email', { required: true })}
               placeholder='Email'
               className='contactInput'
               type='email'
@@ -52,12 +77,14 @@ export default function ContactMe({}: Props) {
           </div>
 
           <input
+            {...register('subject')}
             placeholder='Subject'
             className='contactInput'
             type='text'
           />
 
           <textarea
+            {...register('message')}
             placeholder='Message'
             className='contactInput'
             name=''
