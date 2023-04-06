@@ -9,6 +9,9 @@ import {
   ContactMe,
 } from '@/components';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
+import Image from 'next/image';
+import ScrollUp from '@/assets/scroll-up-blue.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -59,7 +62,7 @@ export default function Home() {
 
       <section
         id='projects'
-        className='snap-center'
+        className='snap-start'
       >
         <Projects />
       </section>
@@ -70,6 +73,16 @@ export default function Home() {
       >
         <ContactMe />
       </section>
+
+      <Link href='/#hero'>
+        <footer className='sticky bottom-5 pr-3 w-full cursor-pointer flex items-center justify-end'>
+          <Image
+            src={ScrollUp}
+            alt='Scroll up icon'
+            className='h-12 w-12 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+          />
+        </footer>
+      </Link>
     </div>
   );
 }
