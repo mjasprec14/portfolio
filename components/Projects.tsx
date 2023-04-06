@@ -13,13 +13,13 @@ export default function Projects({}: Props) {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className='relative h-screen flex flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly items-center mx-auto z-0'
+      className='relative h-screen flex flex-col text-left overflow-hidden md:flex-row max-w-full justify-evenly items-center mx-auto z-0 pb-6 px-10'
     >
       <h3 className='absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500'>
         Projects
       </h3>
 
-      <div className='relative w-9/12 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
         {projects.map((project, idx) => (
           <div
             key={idx}
