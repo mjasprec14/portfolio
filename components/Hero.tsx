@@ -26,6 +26,7 @@ export default function Hero({}: Props) {
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
       <Image
+        priority
         className='relative rounded-full h-32 w-32 object-cover'
         src={Me}
         alt='MJ Asprec photo'
@@ -41,19 +42,19 @@ export default function Hero({}: Props) {
         </h1>
 
         <div className='pt-5'>
-          <Link href='#about'>
+          <Link href='/#about'>
             <button className='heroButton'>About</button>
           </Link>
 
-          <Link href='#experience'>
+          <Link href='/#experience'>
             <button className='heroButton'>Experience</button>
           </Link>
 
-          <Link href='#skills'>
+          <Link href='/#skills'>
             <button className='heroButton'>Skills</button>
           </Link>
 
-          <Link href='#projects'>
+          <Link href='/#projects'>
             <button className='heroButton'>Projects</button>
           </Link>
         </div>
