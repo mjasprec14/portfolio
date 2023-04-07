@@ -55,7 +55,7 @@ export default defineType({
       name: 'socials',
       title: 'Socials',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'socials'}}],
+      of: [{type: 'reference', to: {type: 'social'}}],
     }),
   ],
 })
