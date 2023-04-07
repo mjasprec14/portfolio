@@ -1,9 +1,16 @@
 import React from 'react';
 
-type Props = {};
+export type ProfileProps = {
+  name: string;
+  title: string;
+};
 
-const Hero = (props: Props) => {
-  return <div>Hero</div>;
+const Hero = ({ name, title }: ProfileProps) => {
+  return (
+    <div>
+      {name} Hero {title}
+    </div>
+  );
 };
 
 export default Hero;

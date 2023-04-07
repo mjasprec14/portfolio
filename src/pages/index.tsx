@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header } from '@/components';
+import { SectionLayout, Header, Hero } from '@/components';
 
 import { Inter } from 'next/font/google';
 
@@ -12,7 +12,20 @@ export default function Home() {
         <title>MJ Asprec Portfolio</title>
       </Head>
 
-      <h1 className='text-red-500'>hello world</h1>
+      <Header />
+      {/* HEADER */}
+
+      {/* HERO */}
+
+      {/* ABOUT */}
+
+      {/* WORK EXPERIENCE*/}
+
+      {/* SKILLS */}
+
+      {/* PROJECTS */}
+
+      {/* CONTACT ME */}
     </main>
   );
 }
