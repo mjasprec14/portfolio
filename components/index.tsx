@@ -1,0 +1,9 @@
+export { default as About } from './About/About';
+export { default as BackgroundCircles } from './BackgroundCircles/BackgroundCircles';
+export { default as ContactMe } from './ContactMe/ContactMe';
+export { default as ExperienceCard } from './ExperienceCard/ExperienceCard';
+export { default as Header } from './Header/Header';
+export { default as Hero } from './Hero/Hero';
+export { default as Projects } from './Projects/Projects';
+export { default as Skills } from './Skills/Skills';
+export { default as WorkExperience } from './WorkExperience/WorkExperience';
