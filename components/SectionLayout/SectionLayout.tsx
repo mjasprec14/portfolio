@@ -1,22 +1,24 @@
-import React from 'react';
-import { ProfileProps } from '../Hero/Hero';
+import React, { useState } from 'react';
 
-type SectionProps = {
-  isVisible: boolean;
-  component: React.ComponentType<ProfileProps>;
-  Props: any;
+type ExtraInfoType = {
+  extraInfo: string;
 };
 
-const SectionLayout = ({
-  isVisible,
-  component: Component,
-  Props,
-}: SectionProps) => {
-  return (
-    <div className=''>
-      <Component {...Props} />
-    </div>
-  );
-};
+export default function SectionLayout<P>(
+  WrappedComponent: React.ComponentType<P & ExtraInfoType>
+) {
+  const [extraInfo, setExtraInfo] = useState('');
 
-export default SectionLayout;
+  const ComponentWithExtraInfo = (props: P) => {
+    return (
+      <section>
+        <WrappedComponent
+          {...props}
+          extraInfo={extraInfo}
+        />
+      </section>
+    );
+  };
+
+  return ComponentWithExtraInfo;
+}
