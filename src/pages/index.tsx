@@ -74,15 +74,15 @@ export default function Home() {
         <ContactMe />
       </section>
 
-      <Link href='/#hero'>
-        <footer className='sticky bottom-5 pr-3 w-full cursor-pointer flex items-center justify-end'>
+      <footer className='sticky bottom-5 pr-3 w-full cursor-pointer flex items-center justify-end'>
+        <Link href='/#hero'>
           <Image
             src={ScrollUp}
             alt='Scroll up icon'
             className='h-12 w-12 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
           />
-        </footer>
-      </Link>
+        </Link>
+      </footer>
     </div>
   );
 }
