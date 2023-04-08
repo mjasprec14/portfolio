@@ -32,7 +32,7 @@ const Hero = (props: HeroProps) => {
       />
       <div className='z-20'>
         <h2 className='text-sm uppercase text-gray-500 font-semibold tracking-[15px] pb-2'>
-          Frontend Software Engineer
+          Frontend Engineer
         </h2>
         <h1 className='text-3xl lg:text-5xl font-semibold px-10'>
           <span className='mr-3'>{text}</span>
