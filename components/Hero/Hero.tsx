@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import HeroPhoto from '@/assets/me.png';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 type HeroProps = {};
 
@@ -40,25 +41,75 @@ const Hero = (props: HeroProps) => {
         </h1>
 
         <div className='pt-5'>
-          <Link href='/#about'>
-            <button className='heroButton'>About</button>
-          </Link>
+          <motion.span
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 5 }}
+          >
+            <Link href='/#about'>
+              <button className='heroButton'>About</button>
+            </Link>
+          </motion.span>
 
-          <Link href='/#experience'>
-            <button className='heroButton'>Experience</button>
-          </Link>
+          <motion.span
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 3 }}
+          >
+            <Link href='/#experience'>
+              <button className='heroButton'>Experience</button>
+            </Link>
+          </motion.span>
 
-          <Link href='/#skills'>
-            <button className='heroButton'>Skills</button>
-          </Link>
+          <motion.span
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 1.5 }}
+          >
+            <Link href='/#skills'>
+              <button className='heroButton'>Skills</button>
+            </Link>
+          </motion.span>
 
-          <Link href='/#projects'>
-            <button className='heroButton'>Projects</button>
-          </Link>
+          <motion.span
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 3 }}
+          >
+            <Link href='/#projects'>
+              <button className='heroButton'>Projects</button>
+            </Link>
+          </motion.span>
 
-          <Link href='/#certifications'>
-            <button className='heroButton'>Certifications</button>
-          </Link>
+          <motion.span
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{ duration: 5 }}
+          >
+            <Link href='/#certifications'>
+              <button className='heroButton'>Certifications</button>
+            </Link>
+          </motion.span>
         </div>
       </div>
     </div>
