@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import {
   About,
+  ContactMe,
   Header,
   Hero,
   Projects,
@@ -14,7 +15,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className='h-screen bg-[rgb(36,36,36)] text-white snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0'>
+    <main className='z-0 h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden bg-[rgb(36,36,36)] text-white'>
       <Head>
         <title>MJ Asprec Portfolio</title>
       </Head>
@@ -54,7 +55,13 @@ export default function Home() {
       >
         <Projects />
       </section>
-      {/* CONTACT ME */}
+
+      <section
+        id='contact'
+        className='snap-start'
+      >
+        <ContactMe />
+      </section>
     </main>
   );
 }
