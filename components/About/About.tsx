@@ -10,7 +10,7 @@ const About = (props: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className='sectionContainer'
+      className='sectionContainer text-center md:text-left max-w-7xl'
     >
       <h3 className='sectionHeader'>About</h3>
 
