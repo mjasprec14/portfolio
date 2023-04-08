@@ -9,7 +9,8 @@ const WorkExperience = (props: Props) => {
     <motion.div className='sectionContainer overflow-hidden max-w-full'>
       <h3 className='sectionHeader'>Experience</h3>
 
-      <div>
+      <div className='w-full flex flex-row space-x-5 p-10 snap-x snap-mandatory overflow-x-scroll'>
+        <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
