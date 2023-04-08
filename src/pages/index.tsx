@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { About, Header, Hero, WorkExperience } from '@/components';
+import { About, Header, Hero, Skills, WorkExperience } from '@/components';
 
 import { Inter } from 'next/font/google';
 
@@ -33,7 +33,13 @@ export default function Home() {
       >
         <WorkExperience />
       </section>
-      {/* SKILLS */}
+
+      <section
+        id='skills'
+        className='snap-center'
+      >
+        <Skills />
+      </section>
       {/* PROJECTS */}
       {/* CONTACT ME */}
     </main>
