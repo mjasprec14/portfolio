@@ -10,6 +10,9 @@ import {
 } from '@/components';
 
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
+import Image from 'next/image';
+import ArrowUp from '@/assets/icons8-up-arrow.gif';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -62,6 +65,21 @@ export default function Home() {
       >
         <ContactMe />
       </section>
+
+      <footer className='sticky bottom-5 w-full'>
+        <div className='flex items-center justify-end px-4'>
+          <Link
+            href='/#hero'
+            className='cursor-pointer'
+          >
+            <Image
+              src={ArrowUp}
+              alt='Arrow Up'
+              className='h-8 w-8 animate-pulse rounded-full object-cover grayscale filter hover:grayscale-0'
+            />
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }
