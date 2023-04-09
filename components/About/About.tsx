@@ -10,7 +10,7 @@ const About = (props: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className='sectionContainer text-center md:text-left max-w-7xl'
+      className='sectionContainer max-w-7xl px-10 text-center md:text-left'
     >
       <h3 className='sectionHeader'>About</h3>
 
@@ -20,7 +20,7 @@ const About = (props: Props) => {
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
         src={AboutPhoto.src}
-        className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:h-96 md:w-64 xl:h-[600px] xl:w-[500px]'
+        className='-mb-20 h-56 w-56 flex-shrink-0 rounded-full object-cover md:mb-0 md:h-96 md:w-64 md:rounded-lg xl:h-[600px] xl:w-[500px]'
       />
 
       <div className='space-y-10 px-10 md:px-10'>

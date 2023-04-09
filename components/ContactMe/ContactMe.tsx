@@ -25,7 +25,7 @@ const ContactMe = (props: Props) => {
   };
 
   return (
-    <div className='sectionContainer max-w-7xl text-center md:text-left'>
+    <div className='sectionContainer max-w-7xl px-10 text-center md:text-left'>
       <h3 className='sectionHeader'>Contact</h3>
 
       <div className='flex flex-col space-y-10'>
