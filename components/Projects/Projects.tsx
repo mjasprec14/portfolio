@@ -16,7 +16,7 @@ const Projects = (props: Props) => {
     >
       <h3 className='sectionHeader'>Projects</h3>
 
-      <div className='relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll'>
+      <div className='relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin'>
         {projects.map((project, idx) => (
           <div
             key={idx}

@@ -11,7 +11,7 @@ type Props = {};
 
 const ExperienceCard = (props: Props) => {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-20 opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-pointer overflow-hidden'>
+    <article className='flex w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-20 opacity-50 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]'>
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -19,14 +19,14 @@ const ExperienceCard = (props: Props) => {
         viewport={{ once: true }}
         src={NextPay.src}
         alt='NextPay Logo'
-        className='h-32 w-32 rounded-full xl:h-[160px] xl:w-[160px] object-contain object-center'
+        className='h-32 w-32 rounded-full object-contain object-center xl:h-[160px] xl:w-[160px]'
       />
 
       <div className='px-0 md:px-10'>
         <h4 className='text-4xl font-light'>Frontend Software Engineer</h4>
-        <p className='font-bold text-2xl mt-1'>NextPay</p>
+        <p className='mt-1 text-2xl font-bold'>NextPay</p>
 
-        <div className='flex space-x-2 my-2 items-center'>
+        <div className='my-2 flex items-center space-x-2'>
           <Image
             src={ReactIcon}
             alt='React Icon'
@@ -52,11 +52,11 @@ const ExperienceCard = (props: Props) => {
           />
         </div>
 
-        <p className='uppercase py-5 text-gray-300'>
+        <p className='py-5 uppercase text-gray-300'>
           Started work... - Ended...
         </p>
 
-        <ul className='list-disc space-y-4 ml-5 text-lg h-52 overflow-y-scroll'>
+        <ul className='ml-5 h-52 list-disc space-y-4 overflow-y-scroll px-4 text-lg scrollbar-thin'>
           <li>Proident magna velit tempor culpa.</li>
           <li>
             Dolor non nisi anim proident velit duis incididunt laborum aliqua
