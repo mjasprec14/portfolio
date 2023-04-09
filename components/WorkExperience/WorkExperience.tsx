@@ -6,10 +6,10 @@ type Props = {};
 
 const WorkExperience = (props: Props) => {
   return (
-    <motion.div className='sectionContainer max-w-full overflow-hidden'>
+    <motion.div className='sectionContainer max-w-full space-y-12 overflow-hidden'>
       <h3 className='sectionHeader'>Experience</h3>
 
-      <div className='mt-4 flex h-5/6 w-full snap-x snap-mandatory flex-row space-x-5 overflow-x-scroll border-red-500 p-10 scrollbar-thin'>
+      <div className='flex h-5/6 w-full snap-x snap-mandatory flex-row space-x-5 overflow-x-scroll border-red-500 p-10 scrollbar-thin'>
         <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
