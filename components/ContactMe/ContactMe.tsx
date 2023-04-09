@@ -1,9 +1,29 @@
 import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 type Props = {};
 
+type FormInputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 const ContactMe = (props: Props) => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<FormInputs>();
+
+  const onSubmit: SubmitHandler<FormInputs> = (formData) => {
+    const { subject, name, message, email } = formData;
+    window.location.href = `mailto:michaeljosephasprec1@gmail.com?subject=${subject}&body=Hi, I'm ${name}. ${message} (${email})`;
+  };
+
   return (
     <div className='sectionContainer max-w-7xl text-center md:text-left'>
       <h3 className='sectionHeader'>Contact</h3>
@@ -31,17 +51,23 @@ const ContactMe = (props: Props) => {
           </div>
         </div>
 
-        <form className='mx-auto flex w-fit flex-col space-y-2'>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className='mx-auto flex w-fit flex-col space-y-2'
+        >
           <div className='flex'>
             <input
               type='text'
               placeholder='Name'
               className='contactInput mr-2'
+              {...register('name')}
             />
+            {/* Added react hook form register method causes an error when you input something - see console log */}
             <input
               type='email'
               placeholder='Email'
               className='contactInput'
+              {...register('email')}
             />
           </div>
 
@@ -49,11 +75,13 @@ const ContactMe = (props: Props) => {
             type='text'
             placeholder='Subject'
             className='contactInput'
+            {...register('subject')}
           />
 
           <textarea
             placeholder='Message'
             className='contactInput'
+            {...register('message')}
           />
 
           <button
