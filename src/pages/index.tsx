@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import {
   About,
@@ -9,17 +10,36 @@ import {
   WorkExperience,
 } from '@/components';
 
-import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArrowUp from '@/assets/icons8-up-arrow.gif';
 import { useState } from 'react';
 
 import { motion } from 'framer-motion';
+import { PageInfo, Experience, Skill, Project, Social } from '@/typings';
+import {
+  fetchExperience,
+  fetchPageInfo,
+  fetchProjects,
+  fetchSkills,
+  fetchSocials,
+} from '@/utils';
 
-const inter = Inter({ subsets: ['latin'] });
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+};
 
-export default function Home() {
+export default function Home({
+  pageInfo,
+  experiences,
+  skills,
+  projects,
+  socials,
+}: Props) {
   const [scroll, setScroll] = useState(0);
 
   const handleScroll = (event: any) => {
@@ -33,7 +53,8 @@ export default function Home() {
       <Head>
         <title>MJ Asprec Portfolio</title>
       </Head>
-      <Header />
+
+      <Header socials={socials} />
 
       <section
         id='hero'
@@ -101,3 +122,22 @@ export default function Home() {
     </main>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExperience();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials,
+    },
+    revalidate: 45,
+  };
+};
