@@ -5,17 +5,12 @@
 /.pnp
 .pnp.js
 
-# sanity
-/sanity/node_modules
-
 # testing
 /coverage
 
 # next.js
 /.next/
 /out/
-
-sanity/node_modules
 
 # production
 /build
