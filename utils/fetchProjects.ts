@@ -8,7 +8,7 @@ const fetchProjects = async () => {
   const data = await res.json();
   const projects: Project[] = data.projects;
 
-  console.log('fetching Projects...', projects);
+  // console.log('fetching Projects...', projects);
 
   return projects;
 };
