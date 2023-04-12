@@ -1,16 +1,17 @@
 import React from 'react';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from '../BackgroundCircles/BackgroundCircles';
 import Image from 'next/image';
+import { PageInfo } from '@/typings';
 
 import HeroPhoto from '@/assets/me.png';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-type HeroProps = {};
+type Props = { pageInfo: PageInfo };
 
-const Hero = (props: HeroProps) => {
-  const [text, count] = useTypewriter({
+const Hero = (props: Props) => {
+  const text = {
     words: [
       '<FrontEnd/>',
       'Love',
@@ -22,7 +23,9 @@ const Hero = (props: HeroProps) => {
     ],
     loop: true,
     delaySpeed: 2000,
-  });
+  };
+
+  console.log('props', props);
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
@@ -36,7 +39,9 @@ const Hero = (props: HeroProps) => {
           Frontend Engineer
         </h2>
         <h1 className='text-3xl lg:text-5xl font-semibold px-10'>
-          <span className='mr-3'>{text}</span>
+          <span className='mr-3'>
+            <Typewriter {...text} />
+          </span>
           <Cursor cursorColor='#F7AB0A' />
         </h1>
 
