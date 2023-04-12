@@ -7,9 +7,10 @@ const fetchPageInfo = async () => {
     );
 
     const data = await res.json();
+
     const pageInfo: PageInfo = data.pageInfo;
 
-    console.log('fetching PageInfo...', pageInfo);
+    // console.log('fetching PageInfo...', pageInfo);
 
     return pageInfo;
   } catch (error: any) {

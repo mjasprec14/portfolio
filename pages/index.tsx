@@ -61,7 +61,7 @@ export default function Home({
         id='hero'
         className='snap-start'
       >
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       <section
