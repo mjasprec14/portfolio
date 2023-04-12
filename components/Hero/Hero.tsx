@@ -3,14 +3,15 @@ import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from '../BackgroundCircles/BackgroundCircles';
 import Image from 'next/image';
 import { PageInfo } from '@/typings';
+import { urlFor } from '@/sanity';
 
-import HeroPhoto from '@/assets/me.png';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 type Props = { pageInfo: PageInfo };
 
-const Hero = (props: Props) => {
+const Hero = ({ pageInfo }: Props) => {
+  const { heroImage, role } = pageInfo;
   const text = {
     words: [
       '<FrontEnd/>',
@@ -25,18 +26,19 @@ const Hero = (props: Props) => {
     delaySpeed: 2000,
   };
 
-  console.log('props', props);
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
       <Image
-        src={HeroPhoto}
+        src={urlFor(heroImage).url()}
+        height={317}
+        width={245}
         alt='Landing page profile photo'
         className='relative h-32 w-32 rounded-full object-cover mx-auto'
       />
       <div className='z-20'>
         <h2 className='text-sm uppercase text-gray-500 font-semibold tracking-[15px] pb-2'>
-          Frontend Engineer
+          {role}
         </h2>
         <h1 className='text-3xl lg:text-5xl font-semibold px-10'>
           <span className='mr-3'>
