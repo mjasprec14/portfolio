@@ -8,7 +8,6 @@ type Props = {
 };
 
 const WorkExperience = ({ experiences }: Props) => {
-  console.log(experiences);
   return (
     <motion.div className='sectionContainer max-w-full space-y-12 overflow-hidden'>
       <h3 className='sectionHeader'>Experience</h3>
