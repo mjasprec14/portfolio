@@ -60,7 +60,7 @@ const ExperienceCard = ({ experience }: Props) => {
             : new Date(dateEnded).toDateString()}
         </p>
 
-        <ul className='ml-5 h-52 list-disc space-y-4 overflow-y-scroll px-4 text-lg scrollbar-thin'>
+        <ul className='ml-5 h-52 list-disc space-y-4 overflow-y-scroll px-4 text-lg scrollbar-thin scrollbar-track-black'>
           {points?.map((point, idx) => (
             <li key={idx}>{point}</li>
           ))}
