@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import AboutPhoto from '@/assets/about.jpg';
+import { PageInfo } from '@/typings';
+import { urlFor } from '@/sanity';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
+  const { profilePic, backgroundInformation } = pageInfo;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,7 +25,7 @@ const About = (props: Props) => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        src={AboutPhoto.src}
+        src={urlFor(profilePic).url()}
         className='-mb-20 h-56 w-56 flex-shrink-0 rounded-full object-cover md:mb-0 md:h-96 md:w-64 md:rounded-lg xl:h-[600px] xl:w-[500px]'
       />
 
@@ -29,13 +35,7 @@ const About = (props: Props) => {
           <span className='underline decoration-[#F7AB0A]/50'>sunglasses</span>{' '}
           in the middle of the night.😎
         </h4>
-        <p className='text-base'>
-          I&apos;m a Software Engineer with 2 years of experience in Front-end
-          development using HTML, CSS, SCSS, Bootstrap, Javascript, React,
-          Typescript, and Material-UI, writing tests Unit tests, and Automated
-          tests using Cypress. I helped in creating new App features, fixed
-          existing UI issues and other front-end related things.
-        </p>
+        <p className='text-base'>{backgroundInformation}</p>
       </div>
     </motion.div>
   );

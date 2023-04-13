@@ -69,7 +69,7 @@ export default function Home({
         id='about'
         className='snap-center'
       >
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       <section
@@ -141,6 +141,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       socials,
       error: null,
     },
-    revalidate: 3600,
+    revalidate: 60,
   };
 };
