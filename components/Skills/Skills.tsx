@@ -22,15 +22,13 @@ const Skills = ({ skills }: Props) => {
       </h3>
 
       <div className='absolute top-52 grid grid-cols-4 gap-5'>
-        {skills.length > 0
-          ? skills.map((skill, idx) => (
-              <Skill
-                key={idx}
-                skill={skill}
-                directionLeft={idx % 2 === 0}
-              />
-            ))
-          : null}
+        {skills?.map((skill, idx) => (
+          <Skill
+            key={idx}
+            skill={skill}
+            directionLeft={idx % 2 === 0}
+          />
+        ))}
       </div>
     </motion.div>
   );

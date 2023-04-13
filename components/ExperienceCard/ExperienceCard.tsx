@@ -22,6 +22,7 @@ const ExperienceCard = ({ experience }: Props) => {
     jobTitle,
     points,
     technologies,
+    isCurrentlyWorkingHere,
   } = experience;
   return (
     <article className='flex w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-20 opacity-50 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]'>
@@ -40,28 +41,29 @@ const ExperienceCard = ({ experience }: Props) => {
         <p className='mt-1 text-2xl font-bold'>{company}</p>
 
         <div className='my-2 flex items-center space-x-2 pt-5'>
-          {technologies?.length > 0
-            ? technologies.map(({ image, title }, idx) => (
-                <Image
-                  key={title + idx}
-                  src={urlFor(image).url()}
-                  alt={title}
-                  height={36}
-                  width={36}
-                  className='rounded-full'
-                />
-              ))
-            : null}
+          {technologies?.map(({ image, title }, idx) => (
+            <Image
+              key={title + idx}
+              src={urlFor(image).url()}
+              alt={title}
+              height={36}
+              width={36}
+              className='rounded-full'
+            />
+          ))}
         </div>
 
         <p className='text-[18px] font-semibold py-5 uppercase text-gray-500'>
-          {dateStarted} - {dateEnded}
+          {new Date(dateStarted).toDateString()} -{' '}
+          {isCurrentlyWorkingHere
+            ? 'Present'
+            : new Date(dateEnded).toDateString()}
         </p>
 
         <ul className='ml-5 h-52 list-disc space-y-4 overflow-y-scroll px-4 text-lg scrollbar-thin'>
-          {points.length > 0
-            ? points.map((point, idx) => <li key={idx}>{point}</li>)
-            : null}
+          {points?.map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
         </ul>
       </div>
     </article>

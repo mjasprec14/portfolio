@@ -42,22 +42,20 @@ const Header = ({ socials }: Props) => {
   return (
     <header className='sticky top-0 z-20 mx-auto flex max-w-7xl items-start justify-between p-5 xl:items-center'>
       <div className='flex flex-row items-center'>
-        {socials.length > 0
-          ? socials.map((social, idx) => (
-              <motion.span
-                key={social._id}
-                initial={animationValues[idx].initial}
-                animate={animationValues[idx].animate}
-                transition={animationValues[idx].transition}
-              >
-                <SocialIcon
-                  url={social.url}
-                  fgColor='gray'
-                  bgColor='transparent'
-                />
-              </motion.span>
-            ))
-          : null}
+        {socials?.map((social, idx) => (
+          <motion.span
+            key={social._id}
+            initial={animationValues[idx].initial}
+            animate={animationValues[idx].animate}
+            transition={animationValues[idx].transition}
+          >
+            <SocialIcon
+              url={social.url}
+              fgColor='gray'
+              bgColor='transparent'
+            />
+          </motion.span>
+        ))}
       </div>
 
       <div className='flex cursor-pointer flex-row items-center text-gray-300'>

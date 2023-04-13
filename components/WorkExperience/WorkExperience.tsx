@@ -13,14 +13,12 @@ const WorkExperience = ({ experiences }: Props) => {
       <h3 className='sectionHeader'>Experience</h3>
 
       <div className='flex h-5/6 w-full snap-x snap-mandatory flex-row space-x-5 overflow-x-scroll border-red-500 p-10 scrollbar-thin'>
-        {experiences.length > 0
-          ? experiences.map((experience, idx) => (
-              <ExperienceCard
-                key={experience._id}
-                experience={experience}
-              />
-            ))
-          : null}
+        {experiences?.map((experience, idx) => (
+          <ExperienceCard
+            key={experience._id}
+            experience={experience}
+          />
+        ))}
       </div>
     </motion.div>
   );
