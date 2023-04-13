@@ -8,7 +8,6 @@ const query = groq`
   ...,
   technologies[] ->
 }
-
 `;
 
 type Data = {

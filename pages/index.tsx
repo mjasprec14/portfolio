@@ -31,6 +31,7 @@ type Props = {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
+  error?: any;
 };
 
 export default function Home({
@@ -138,7 +139,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       projects,
       socials,
+      error: null,
     },
-    revalidate: 45,
+    revalidate: 3600,
   };
 };
