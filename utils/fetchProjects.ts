@@ -1,20 +1,20 @@
 import { Project } from '@/typings';
+import axios from 'axios';
 
 const fetchProjects = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
-  );
+  try {
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
+    );
 
-  if (!res.ok) {
+    const projects: Project[] = response.data.projects;
+
+    // console.log('fetching Projects...', projects);
+
+    return projects;
+  } catch (error) {
     throw new Error('Failed to fetch data for Projects');
   }
-
-  const data = await res.json();
-  const projects: Project[] = data.projects;
-
-  // console.log('fetching Projects...', projects);
-
-  return projects;
 };
 
 export default fetchProjects;
