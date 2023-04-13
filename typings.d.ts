@@ -48,12 +48,10 @@ export interface PageInfo extends SanityBody {
   backgroundInformation: string;
   email: string;
   role: string;
+  heroImage: Image;
   name: string;
   phoneNumber: string;
-
-  heroImage: Image;
   profilePic: Image;
-  socials: Social;
 }
 
 export interface Experience extends SanityBody {
