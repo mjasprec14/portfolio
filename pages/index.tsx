@@ -76,7 +76,7 @@ export default function Home({
         id='experience'
         className='snap-center'
       >
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
 
       <section
