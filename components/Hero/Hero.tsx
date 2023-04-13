@@ -30,6 +30,7 @@ const Hero = ({ pageInfo }: Props) => {
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
       <Image
+        priority
         src={urlFor(heroImage).url()}
         height={317}
         width={245}
