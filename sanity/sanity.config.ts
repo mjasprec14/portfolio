@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'MJAsprec-Portfolio',
 
-  projectId: 'scpqfp4r',
+  projectId: 'd5grszkw',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
