@@ -97,7 +97,7 @@ export default function Home({
         id='contact'
         className='snap-start'
       >
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       <footer className='sticky bottom-5 w-full'>
