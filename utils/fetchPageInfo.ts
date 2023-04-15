@@ -1,13 +1,13 @@
 import { PageInfo } from '@/typings';
-import axios from 'axios';
 
 const fetchPageInfo = async () => {
   try {
-    const response = await axios.get(
+    const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/getPageInfo`
     );
 
-    const pageInfo: PageInfo = response.data.pageInfo;
+    const data = await res.json();
+    const pageInfo: PageInfo = data.pageInfo;
 
     // console.log('fetching PageInfo...', pageInfo);
     return pageInfo;

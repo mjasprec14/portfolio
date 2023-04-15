@@ -1,18 +1,21 @@
 import { Social } from '@/typings';
 
 const fetchSocials = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`
+    );
 
-  if (!res.ok) {
+    const data = await res.json();
+    const socials: Social[] = data.socials;
+
+    // console.log('fetching socials...', socials);
+
+    return socials;
+  } catch (error) {
+    console.log(error);
     throw new Error('Failed to fetch data for Socials');
   }
-
-  const data = await res.json();
-  const socials: Social[] = data.socials;
-
-  // console.log('fetching socials...', socials);
-
-  return socials;
 };
 
 export default fetchSocials;
