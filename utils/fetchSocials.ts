@@ -1,10 +1,9 @@
 import { Social } from '@/typings';
+import { assetPrefix } from '../next.config';
 
 const fetchSocials = async () => {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`
-    );
+    const res = await fetch(`${assetPrefix}/api/getSocials`);
 
     const data = await res.json();
     const socials: Social[] = data.socials;

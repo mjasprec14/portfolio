@@ -1,10 +1,9 @@
 import { Skill } from '@/typings';
+import { assetPrefix } from '../next.config';
 
 const fetchSkills = async () => {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/getSkills`
-    );
+    const res = await fetch(`${assetPrefix}/api/getSkills`);
 
     const data = await res.json();
     const skills: Skill[] = data.skills;

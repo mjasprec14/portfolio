@@ -1,11 +1,9 @@
 import { Experience } from '@/typings';
-import axios from 'axios';
+import { assetPrefix } from '../next.config';
 
 const fetchExperience = async () => {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperience`
-    );
+    const res = await fetch(`${assetPrefix}/api/getExperience`);
 
     const data = await res.json();
 
