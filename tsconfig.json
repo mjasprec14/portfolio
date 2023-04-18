@@ -22,7 +22,8 @@
     "paths": {
       "@/*": ["./*"],
       "@schemas": ["./src/sanity/schemas"],
-      "@utils": ["./src/sanity/utils"]
+      "@utils": ["./src/sanity/utils"],
+      "@components": ["./src/components"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
