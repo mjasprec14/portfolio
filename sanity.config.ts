@@ -7,7 +7,7 @@ const config = defineConfig({
   projectId: 'd5grszkw',
   dataset: 'production',
   title: 'MJ Asprec Portfolio',
-  apiVersion: '2023-18-04',
+  apiVersion: '2023-04-18',
   basePath: '/admin',
   plugins: [deskTool(), visionTool()],
   schema: { types: schemas },
