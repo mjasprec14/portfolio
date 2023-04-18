@@ -1,5 +1,9 @@
-export { default as experience } from './experience';
-export { default as pageInfo } from './pageInfo';
-export { default as project } from './project';
-export { default as skill } from './skill';
-export { default as social } from './social';
+import experience from './experience';
+import pageInfo from './pageInfo';
+import project from './project';
+import skill from './skill';
+import social from './social';
+
+const schemas = [experience, pageInfo, project, skill, social];
+
+export default schemas;
