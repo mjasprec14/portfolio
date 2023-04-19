@@ -57,10 +57,12 @@ const Header = ({ socials }: any) => {
               onClick={() => setTheme('light')}
               className='rounded-xl'
             >
-              <RiSunLine
-                size={20}
-                color='gray'
-              />
+              <i>
+                <RiSunLine
+                  size={20}
+                  color='gray'
+                />
+              </i>
             </button>
           </motion.span>
         ) : (
@@ -74,7 +76,9 @@ const Header = ({ socials }: any) => {
               onClick={() => setTheme('dark')}
               className='rounded-xl'
             >
-              <RiMoonFill size={20} />
+              <i>
+                <RiMoonFill size={20} />
+              </i>
             </button>
           </motion.span>
         )}
