@@ -13,7 +13,7 @@ const Navbar = (props: Props) => {
           return (
             <Link
               key={idx}
-              href={`/#${navItem.section}`}
+              href={`#${navItem.section}`}
               className='text-[#808080] text-xl'
             >
               <Icon />
