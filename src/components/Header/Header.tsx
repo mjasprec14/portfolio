@@ -5,17 +5,20 @@ import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 import { useTheme } from 'next-themes';
+import { Social } from '@/src/typings/typings';
 
-type Props = {};
+type Props = {
+  socials: Social[];
+};
 
-const Header = ({ socials }: any) => {
+const Header = ({ socials }: Props) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <header className='sticky top-0 z-20 mx-auto flex max-w-7xl items-start justify-between p-5 xl:items-center'>
       <div className='flex flex-row items-center'>
-        {socials?.map((social: any, idx: any) => (
+        {socials?.map((social, idx) => (
           <motion.span
             key={social._id}
             initial={animationValues[idx].initial}
