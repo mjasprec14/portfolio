@@ -20,13 +20,13 @@ const Header = ({ socials }: Props) => {
       <div className='flex flex-row items-center'>
         {socials?.map((social, idx) => (
           <motion.span
-            key={social._id}
-            initial={animationValues[idx].initial}
-            animate={animationValues[idx].animate}
-            transition={animationValues[idx].transition}
+            key={social?._id}
+            initial={animationValues[idx]?.initial}
+            animate={animationValues[idx]?.animate}
+            transition={animationValues[idx]?.transition}
           >
             <SocialIcon
-              url={social.url}
+              url={social?.url}
               fgColor='gray'
               bgColor='transparent'
             />
