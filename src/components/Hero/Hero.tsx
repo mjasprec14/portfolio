@@ -12,7 +12,7 @@ type Props = {
 const Hero = ({ pageInfo }: Props) => {
   return (
     <section id='home'>
-      <div className='h-screen flex flex-col -mt-16 items-center justify-center gap-10 md:flex-row md:-mt-32 md:px-12'>
+      <div className='h-screen flex flex-col -mt-16 items-center justify-center gap-10 md:flex-row md:-mt-32 md:mb-32 md:px-12'>
         <motion.div
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: [0, 0, 0.5, 0.8, 1], y: 0 }}

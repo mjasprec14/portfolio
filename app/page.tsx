@@ -1,6 +1,6 @@
 import { getSocials, getPageInfo } from '@utils';
 import { Social, PageInfo } from '@/src/typings/typings';
-import { Header, Navbar, Hero } from '@/src/components';
+import { Header, Navbar, Hero, About } from '@/src/components';
 
 export default async function Home() {
   const socials: Social[] = await getSocials();
@@ -11,6 +11,7 @@ export default async function Home() {
       <Header socials={socials} />
       <Navbar />
       <Hero pageInfo={pageInfo} />
+      <About />
     </main>
   );
 }
