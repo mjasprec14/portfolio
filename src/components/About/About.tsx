@@ -4,6 +4,7 @@ import { PageInfo } from '@/src/typings/typings';
 import Image from 'next/image';
 import { urlFor } from '@/src/sanity/sanity.utils';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {
   pageInfo: PageInfo;
@@ -74,6 +75,17 @@ const About = ({ pageInfo }: Props) => {
               </motion.span>
             ))}
           </motion.p>
+
+          <div className='flex'>
+            <Link
+              href='/public/mjcv.pdf'
+              target='_blank'
+              download={true}
+              className='flex items-center bg-[rgb(36,36,36)] text-white/80 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white/80 hover:text-[rgb(36,36,36)] border-2 border-solid border-transparent hover:border-[rgb(36,36,36)] dark:border-2 dark:border-solid dark:border-white/80 transition'
+            >
+              Resume
+            </Link>
+          </div>
         </div>
       </motion.div>
     </section>
