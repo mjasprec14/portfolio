@@ -1,11 +1,4 @@
-import {
-  FaUserAlt,
-  FaDev,
-  FaTasks,
-  FaHouseUser,
-  FaLaptopCode,
-  FaPaperPlane,
-} from 'react-icons/fa';
+import { FaDev, FaLaptopCode, FaPaperPlane } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import { BsPersonFill } from 'react-icons/bs';
 
