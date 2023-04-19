@@ -48,7 +48,7 @@ const Header = ({ socials }: any) => {
 
         {currentTheme === 'dark' ? (
           <motion.span
-            className='hidden text-sm uppercase text-gray-400 md:inline-flex'
+            className='hidden text-sm uppercase text-gray-400 md:inline-flex animate-bounce'
             initial={{ opacity: 0, x: -200, scale: 0.5 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1 }}
@@ -65,7 +65,7 @@ const Header = ({ socials }: any) => {
           </motion.span>
         ) : (
           <motion.span
-            className='hidden text-sm uppercase text-[#808080] md:inline-flex'
+            className='hidden text-sm uppercase text-[#808080] md:inline-flex animate-bounce'
             initial={{ opacity: 0, x: -200, scale: 0.5 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1 }}
