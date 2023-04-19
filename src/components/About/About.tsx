@@ -58,7 +58,7 @@ const About = ({ pageInfo }: Props) => {
 
         <div className='w-full md:w-1/2 space-y-4'>
           <h2 className='text-xl md:text-3xl text-gray-500 font-semibold'>
-            Yes, I wear sunglasses in the middle of the night.{' '}
+            Yes, I wear sunglasses in the middle of the night. 😎😂
           </h2>
           <motion.p
             variants={quote}
