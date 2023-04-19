@@ -11,7 +11,7 @@ export default async function Home() {
       <Header socials={socials} />
       <Navbar />
       <Hero pageInfo={pageInfo} />
-      <About />
+      <About pageInfo={pageInfo} />
     </main>
   );
 }
