@@ -6,7 +6,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <div className='hidden md:block absolute right-5 top-[40%] '>
+    <div className='absolute right-5 top-[40%] '>
       <nav className='flex flex-col space-y-5'>
         {NAV_ITEMS?.map((navItem, idx) => {
           const Icon = navItem.icon;
