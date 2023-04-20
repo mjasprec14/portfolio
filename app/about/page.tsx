@@ -12,7 +12,9 @@ const AboutPage = async (props: Props) => {
     <div className='h-screen relative'>
       <Header socials={socials} />
       <Navbar />
-      <About pageInfo={pageInfo} />
+      <div className='px-5 -mt-20 md:px-0'>
+        <About pageInfo={pageInfo} />
+      </div>
     </div>
   );
 };
