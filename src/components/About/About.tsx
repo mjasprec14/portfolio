@@ -6,40 +6,16 @@ import { urlFor } from '@/src/sanity/sanity.utils';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FiDownload } from 'react-icons/fi';
+import { quote, singleWord } from './About.utils';
+import TransitionEffect from '../TransitionEffect/TransitionEffect';
 
 type Props = {
   pageInfo: PageInfo;
 };
-const quote = {
-  initial: {
-    opacity: 1,
-  },
-  animate: {
-    opacity: 10,
-    transition: {
-      delay: 0.5,
-      staggerChildren: 0.08,
-    },
-  },
-};
-
-const singleWord = {
-  initial: {
-    opacity: 0,
-    y: 50,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-    },
-  },
-};
 
 const About = ({ pageInfo }: Props) => {
   return (
-    <section id='About'>
+    <section id='about'>
       <motion.div
         initial={{ y: 150, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
