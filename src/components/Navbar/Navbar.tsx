@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
               whileHover={{ x: -5, scale: 1.5 }}
               whileTap={{ rotateY: -40, rotateX: -20 }}
               key={idx}
-              href={`#${navItem.section}`}
+              href={`${navItem.section}`}
               className='text-[#808080] text-xl'
             >
               <Icon />
