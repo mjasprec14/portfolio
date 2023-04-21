@@ -3,7 +3,7 @@ import { Social, PageInfo } from '@/src/typings/typings';
 import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
-import { useTheme } from 'next-themes';
+import { MdLocationPin } from 'react-icons/md';
 
 type Props = {
   socials: Social[];
@@ -11,8 +11,6 @@ type Props = {
 };
 
 const Footer = ({ socials, pageInfo }: Props) => {
-  const { theme } = useTheme();
-
   let socmed = socials.filter(
     (item) =>
       item.title.toLowerCase() !== 'read.cv' &&
@@ -32,9 +30,8 @@ const Footer = ({ socials, pageInfo }: Props) => {
         className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-10 px-4 space-y-10 md:space-y-0 md:px-10 md:py-0'
       >
         <div className='text-center md:text-left space-y-2'>
-          <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
-            Come and say hello
-          </h3>
+          <MdLocationPin className='h-10 w-10 animate-bounce text-red-500' />
+
           <p className='md:w-1/2 text-xs text-gray-400 uppercase tracking-[2px]'>
             {pageInfo?.address}
           </p>
