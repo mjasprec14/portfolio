@@ -29,18 +29,18 @@ const Footer = ({ socials, pageInfo }: Props) => {
       />
       <footer
         id='footer'
-        className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-10 px-4 space-y-6 md:px-10 md:py-0'
+        className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-10 px-4 space-y-10 md:space-y-0 md:px-10 md:py-0'
       >
-        <div className='space-y-2'>
+        <div className='text-center md:text-left space-y-2'>
           <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
             Come and say hello
           </h3>
-          <p className='text-xs text-gray-400 uppercase tracking-[2px]'>
+          <p className='md:w-1/2 text-xs text-gray-400 uppercase tracking-[2px]'>
             {pageInfo?.address}
           </p>
         </div>
 
-        <div className='flex flex-col md:items-center space-y-4'>
+        <div className='flex flex-col items-center space-y-4'>
           <div className='space-y-4'>
             <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
               Get in touch with me
@@ -81,8 +81,8 @@ const Footer = ({ socials, pageInfo }: Props) => {
           </div>
         </div>
 
-        <div className='flex md:justify-end mt-16 md:mt-0 '>
-          <p className='text-sm text-gray-500 uppercase font-semibold tracking-[5px] dark:text-neutral-200'>
+        <div className='flex justify-center md:justify-end mt-16 md:mt-0 '>
+          <p className='text-xs md:text-sm text-gray-500 uppercase font-semibold tracking-[5px] dark:text-neutral-200'>
             {new Date().getFullYear()} &copy; All Rights Reserved.
           </p>
         </div>
