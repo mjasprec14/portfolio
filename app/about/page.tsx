@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Layout } from '@components';
-import { About } from '@/src/components';
+import { About as AboutComponent } from '@/src/components';
 import { getSocials, getPageInfo } from '@utils';
 import { Social, PageInfo } from '@/src/typings/typings';
 
@@ -20,7 +20,7 @@ const page = async () => {
   };
 };
 
-const PageWrapper = (props: Props) => {
+const About = (props: Props) => {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
@@ -38,9 +38,9 @@ const PageWrapper = (props: Props) => {
       socials={socials}
       pageInfo={pageInfo}
     >
-      <About pageInfo={pageInfo} />
+      <AboutComponent pageInfo={pageInfo} />
     </Layout>
   );
 };
 
-export default PageWrapper;
+export default About;

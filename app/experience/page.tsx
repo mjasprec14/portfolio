@@ -23,7 +23,7 @@ const page = async () => {
   };
 };
 
-const PageWrapper = () => {
+const Experience = () => {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const PageWrapper = () => {
   );
 };
 
-export default PageWrapper;
+export default Experience;
