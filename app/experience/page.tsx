@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout } from '@components';
 import { Experience, PageInfo, Social } from '@/src/typings/typings';
 import { getExperience, getPageInfo, getSocials } from '@utils';
