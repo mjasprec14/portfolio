@@ -15,7 +15,7 @@ export default async function Home() {
   const experiences: Experience[] = await getExperience();
 
   return (
-    <main className='z-0 h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80 dark:bg-[rgb(36,36,36)] dark:text-white'>
+    <main className='z-0 h-screen overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80 dark:bg-[rgb(36,36,36)] dark:text-white'>
       <Header socials={socials} />
       <Navbar />
       <Hero pageInfo={pageInfo} />
