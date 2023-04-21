@@ -30,7 +30,7 @@ const Footer = ({ socials, pageInfo }: Props) => {
       <footer className='w-full py-6 px-4 space-y-6 md:px-10 md:py-0 md:h-1/6  flex flex-col md:flex-row justify-between md:items-start '>
         <div className='flex flex-col space-y-6 md:space-y-0 flex-1 md:flex-row md:flex-grow md:pt-6'>
           <div className='flex-1 space-y-2'>
-            <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px]'>
+            <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
               Come and say hello
             </h3>
             <p className='text-xs text-gray-400 uppercase tracking-[2px]'>
@@ -38,7 +38,7 @@ const Footer = ({ socials, pageInfo }: Props) => {
             </p>
           </div>
           <div className='flex flex-grow flex-col md:items-center space-y-4'>
-            <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px]'>
+            <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
               Get in touch with me
             </h3>
             <div className='flex items-center space-x-3'>
@@ -79,7 +79,7 @@ const Footer = ({ socials, pageInfo }: Props) => {
         </div>
 
         <div className='flex-shrink mt-16 md:mt-0 '>
-          <p className='text-sm text-gray-500 uppercase font-semibold tracking-[5px]'>
+          <p className='text-sm text-gray-500 uppercase font-semibold tracking-[5px] dark:text-neutral-200'>
             {new Date().getFullYear()} &copy; All Rights Reserved.
           </p>
         </div>

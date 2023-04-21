@@ -34,7 +34,7 @@ const About = ({ pageInfo }: Props) => {
         </div>
 
         <div className='w-full md:w-1/2 space-y-4'>
-          <h2 className='text-xl md:text-3xl text-gray-500 font-semibold'>
+          <h2 className='text-xl md:text-3xl text-gray-500 font-semibold dark:text-neutral-200'>
             Yes, I wear sunglasses in the middle of the night. 😎😂
           </h2>
           <motion.p
