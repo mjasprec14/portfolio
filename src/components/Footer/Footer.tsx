@@ -29,8 +29,7 @@ const Footer = ({ socials, pageInfo }: Props) => {
       />
       <footer
         id='footer'
-        // className='w-full py-6 px-4 space-y-6 md:px-10 md:py-0 md:h-1/6 flex flex-col md:flex-row justify-around md:items-start '
-        className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-6 px-4 space-y-6 md:px-10 md:py-0'
+        className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-10 px-4 space-y-6 md:px-10 md:py-0'
       >
         <div className='space-y-2'>
           <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
