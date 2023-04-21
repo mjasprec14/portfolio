@@ -29,18 +29,20 @@ const Footer = ({ socials, pageInfo }: Props) => {
       />
       <footer
         id='footer'
-        className='w-full py-6 px-4 space-y-6 md:px-10 md:py-0 md:h-1/6  flex flex-col md:flex-row justify-between md:items-start '
+        // className='w-full py-6 px-4 space-y-6 md:px-10 md:py-0 md:h-1/6 flex flex-col md:flex-row justify-around md:items-start '
+        className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-6 px-4 space-y-6 md:px-10 md:py-0'
       >
-        <div className='flex flex-col space-y-6 md:space-y-0 flex-1 md:flex-row md:flex-grow md:pt-6'>
-          <div className='flex-1 space-y-2'>
-            <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
-              Come and say hello
-            </h3>
-            <p className='text-xs text-gray-400 uppercase tracking-[2px]'>
-              {pageInfo?.address}
-            </p>
-          </div>
-          <div className='flex flex-grow flex-col md:items-center space-y-4'>
+        <div className='space-y-2'>
+          <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
+            Come and say hello
+          </h3>
+          <p className='text-xs text-gray-400 uppercase tracking-[2px]'>
+            {pageInfo?.address}
+          </p>
+        </div>
+
+        <div className='flex flex-col md:items-center space-y-4'>
+          <div className='space-y-4'>
             <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
               Get in touch with me
             </h3>
@@ -56,32 +58,31 @@ const Footer = ({ socials, pageInfo }: Props) => {
                       url={social?.url}
                       style={{ height: 36, width: 36 }}
                       aria-label={social?.title}
-                      bgColor={theme === 'dark' ? 'gray' : ''}
-                      fgColor={theme === 'dark' ? 'transparent' : ''}
+                      fgColor={'white'}
                     />
                   );
                 }
               })}
             </div>
+          </div>
 
-            <div className='text-xs text-gray-400 uppercase tracking-[2px]'>
-              <div className='flex items-center space-x-2'>
-                <span className='inline-block'>
-                  <AiOutlineMail />
-                </span>
-                <p>{pageInfo?.email}</p>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <span className='inline-block'>
-                  <AiFillPhone />
-                </span>
-                <p>{pageInfo?.phoneNumber}</p>
-              </div>
+          <div className='text-xs text-gray-400 uppercase tracking-[2px]'>
+            <div className='flex items-center space-x-2'>
+              <span className='inline-block'>
+                <AiOutlineMail />
+              </span>
+              <p>{pageInfo?.email}</p>
+            </div>
+            <div className='flex items-center space-x-2'>
+              <span className='inline-block'>
+                <AiFillPhone />
+              </span>
+              <p>{pageInfo?.phoneNumber}</p>
             </div>
           </div>
         </div>
 
-        <div className='flex-shrink mt-16 md:mt-0 '>
+        <div className='flex md:justify-end mt-16 md:mt-0 '>
           <p className='text-sm text-gray-500 uppercase font-semibold tracking-[5px] dark:text-neutral-200'>
             {new Date().getFullYear()} &copy; All Rights Reserved.
           </p>
