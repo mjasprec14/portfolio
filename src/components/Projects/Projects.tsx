@@ -12,7 +12,7 @@ const Project = ({ projects, skills }: Props) => {
 
   return (
     <section id='project'>
-      <div className='h-screen w-full grid grid-cols-4 gap-4 p-20'>
+      <div className='h-auto w-full flex space-x-5 overflow-x-scroll p-4 md:grid-auto-flow-row md:grid md:grid-cols-4 md:gap-4 md:p-20 md:space-x-0 md:h-screen xl:grid-cols-5 xl:gap-6 my-36 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80'>
         {myArr.map((item) => (
           <ProjectCard
             key={item}
