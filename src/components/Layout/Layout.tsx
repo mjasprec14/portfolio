@@ -1,6 +1,6 @@
 'use client';
 import { PageInfo, Social } from '@/src/typings/typings';
-import { Header, Navbar, Footer } from '@components';
+import { Header, Navbar, Footer, TransitionEffect } from '@components';
 
 type Prop = {
   socials: Social[];
@@ -10,15 +10,18 @@ type Prop = {
 
 const Layout = ({ children, socials, pageInfo }: Prop) => {
   return (
-    <main className='z-0 h-screen overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80 dark:bg-[rgb(36,36,36)] dark:text-white'>
-      <Header socials={socials} />
-      <Navbar />
-      {children}
-      <Footer
-        pageInfo={pageInfo}
-        socials={socials}
-      />
-    </main>
+    <>
+      <TransitionEffect />
+      <main className='z-0 h-screen overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80 dark:bg-[rgb(36,36,36)] dark:text-white'>
+        <Header socials={socials} />
+        <Navbar />
+        {children}
+        <Footer
+          pageInfo={pageInfo}
+          socials={socials}
+        />
+      </main>
+    </>
   );
 };
 
