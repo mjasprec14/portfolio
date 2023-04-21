@@ -27,7 +27,10 @@ const Footer = ({ socials, pageInfo }: Props) => {
         transition={{ duration: 1.5 }}
         className='h-1 w-4/5 bg-gradient-to-r from-blue-600  via-red-500 to-[#F7AB0A]/80'
       />
-      <footer className='w-full py-6 px-4 space-y-6 md:px-10 md:py-0 md:h-1/6  flex flex-col md:flex-row justify-between md:items-start '>
+      <footer
+        id='footer'
+        className='w-full py-6 px-4 space-y-6 md:px-10 md:py-0 md:h-1/6  flex flex-col md:flex-row justify-between md:items-start '
+      >
         <div className='flex flex-col space-y-6 md:space-y-0 flex-1 md:flex-row md:flex-grow md:pt-6'>
           <div className='flex-1 space-y-2'>
             <h3 className='text-sm text-gray-500 uppercase font-semibold tracking-[2px] dark:text-neutral-200'>
