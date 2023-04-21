@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FiDownload } from 'react-icons/fi';
 import { quote, singleWord } from './About.utils';
-import TransitionEffect from '../TransitionEffect/TransitionEffect';
 
 type Props = {
   pageInfo: PageInfo;
@@ -16,7 +15,6 @@ type Props = {
 const About = ({ pageInfo }: Props) => {
   return (
     <section id='about'>
-      <TransitionEffect />
       <motion.div
         initial={{ y: 150, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
