@@ -23,7 +23,7 @@ const page = async () => {
   };
 };
 
-const Experience = () => {
+export default function ExperiencePage() {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
@@ -44,6 +44,4 @@ const Experience = () => {
       <WorkExperience experiences={experiences} />
     </Layout>
   );
-};
-
-export default Experience;
+}
