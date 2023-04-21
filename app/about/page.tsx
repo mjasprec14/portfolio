@@ -20,7 +20,7 @@ const page = async () => {
   };
 };
 
-const About = (props: Props) => {
+export default function About() {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
@@ -41,6 +41,4 @@ const About = (props: Props) => {
       <AboutComponent pageInfo={pageInfo} />
     </Layout>
   );
-};
-
-export default About;
+}
