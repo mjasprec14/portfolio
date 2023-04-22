@@ -1,12 +1,9 @@
 import { createClient, groq } from 'next-sanity';
+import { config } from '../sanity.utils';
 
 export default async function getSkills() {
   try {
-    const client = createClient({
-      projectId: 'd5grszkw',
-      dataset: 'production',
-      apiVersion: '2023-04-18',
-    });
+    const client = createClient(config);
 
     const skills = await client.fetch(groq`*[_type=='skill']`);
 

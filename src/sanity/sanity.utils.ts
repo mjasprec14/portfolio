@@ -5,6 +5,7 @@ export const config = {
   projectId: 'd5grszkw',
   dataset: 'production',
   apiVersion: '2023-04-18',
+  useCdn: true,
 };
 
 export const sanityClient = createClient(config);
