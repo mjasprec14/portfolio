@@ -19,16 +19,13 @@ const Skills = ({ skills }: Props) => {
           transition={{ duration: 1.5 }}
           className='grid px-6 grid-cols-4 gap-3 md:px-0 md:grid-cols-6 md:gap-6'
         >
-          {skills.map((skill, idx) => {
-            console.log(idx % 2 === 0);
-            return (
-              <Icon
-                key={idx}
-                skill={skill}
-                directionBottom={idx % 2 === 0}
-              />
-            );
-          })}
+          {skills.map((skill, idx) => (
+            <Icon
+              key={idx}
+              skill={skill}
+              directionBottom={idx % 2 === 0}
+            />
+          ))}
         </motion.div>
       </div>
     </section>

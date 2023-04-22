@@ -12,7 +12,7 @@ type Props = {
 
 const Icon = ({ skill, directionBottom }: Props) => {
   return (
-    <div className='cursor-pointer relative group flex rounded-full overflow-hidden h-16 w-16 md:h-24 md:w-24'>
+    <div className='cursor-pointer relative group flex rounded-full overflow-hidden h-16 w-16 md:h-24 md:w-24 hover:animate-pulse'>
       <motion.img
         initial={{ y: directionBottom ? -200 : 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

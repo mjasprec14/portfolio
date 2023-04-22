@@ -4,8 +4,10 @@ import { animationValues } from './Header.utils';
 import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
+import { MdEmail } from 'react-icons/md';
 import { useTheme } from 'next-themes';
 import { Social } from '@/src/typings/typings';
+import Link from 'next/link';
 
 type Props = {
   socials: Social[];
@@ -35,18 +37,22 @@ const Header = ({ socials }: Props) => {
       </div>
 
       <div className='flex flex-row cursor-pointer gap-2 items-center text-gray-300'>
-        <motion.i
-          initial={{ opacity: 0, x: 200, scale: 0.5 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 1.5 }}
+        <Link
+          href='mailto:michaeljosephasprec@gmail.com'
+          target='_blank'
+          className='mr-2'
         >
-          <SocialIcon
-            className='cursor-pointer'
-            network='email'
-            fgColor='gray'
-            bgColor='transparent'
-          />
-        </motion.i>
+          <motion.i
+            initial={{ opacity: 0, x: 200, scale: 0.5 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <MdEmail
+              size={20}
+              color='gray'
+            />
+          </motion.i>
+        </Link>
 
         {currentTheme === 'dark' ? (
           <motion.span
