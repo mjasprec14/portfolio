@@ -2,12 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Layout } from '@components';
 import { Project, PageInfo, Social, Skill } from '@/src/typings/typings';
-import {
-  getPageInfo,
-  getProjects,
-  getSkills,
-  getSocials,
-} from '@/src/sanity/utils';
+import { getPageInfo, getProjects, getSkills, getSocials } from '@utils';
 import { Projects } from '@components';
 
 type Props = {
@@ -31,7 +26,7 @@ const page = async () => {
   };
 };
 
-export default function ProjectsPage({}: Props) {
+export default function ProjectsPage() {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
