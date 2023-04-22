@@ -12,13 +12,15 @@ const Project = ({ projects, skills }: Props) => {
 
   return (
     <section id='project'>
-      <div className='h-auto w-full flex space-x-5 overflow-x-scroll p-4 md:grid-auto-flow-row md:grid md:grid-cols-4 md:gap-4 md:p-20 md:space-x-0 md:h-screen xl:grid-cols-5 xl:gap-6 my-36 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80'>
-        {myArr.map((item) => (
-          <ProjectCard
-            key={item}
-            skills={skills}
-          />
-        ))}
+      <div className='h-screen flex flex-col text-left overflow-hidden md:flex-row max-w-full md:px-10 justify-evenly items-center mx-auto'>
+        <div className='w-full flex space-x-5 overflow-x-scroll md:grid md:grid-flow-col md:overflow-x-auto p-4 md:p-10 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80'>
+          {myArr.map((item) => (
+            <ProjectCard
+              key={item}
+              skills={skills}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
