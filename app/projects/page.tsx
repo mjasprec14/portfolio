@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Layout } from '@components';
 import { Project, PageInfo, Social, Skill } from '@/src/typings/typings';
 import { getPageInfo, getProjects, getSkills, getSocials } from '@utils';
-import { Projects } from '@components';
+import { Projects as ProjectsComponent } from '@components';
 
 type Props = {
   projects: Project[];
@@ -26,7 +26,7 @@ const page = async () => {
   };
 };
 
-export default function ProjectsPage() {
+export default function Projects() {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function ProjectsPage() {
       socials={socials}
       pageInfo={pageInfo}
     >
-      <Projects
+      <ProjectsComponent
         projects={projects}
         skills={skills}
       />
