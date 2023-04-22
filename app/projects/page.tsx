@@ -8,7 +8,7 @@ import {
   getSkills,
   getSocials,
 } from '@/src/sanity/utils';
-import { Projects as ProjectsComponent } from '@components';
+import { Projects } from '@components';
 
 type Props = {
   projects: Project[];
@@ -31,7 +31,7 @@ const page = async () => {
   };
 };
 
-export default function Projects({}: Props) {
+export default function ProjectsPage({}: Props) {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function Projects({}: Props) {
       socials={socials}
       pageInfo={pageInfo}
     >
-      <ProjectsComponent
+      <Projects
         projects={projects}
         skills={skills}
       />
