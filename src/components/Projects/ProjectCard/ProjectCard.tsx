@@ -17,7 +17,7 @@ const ProjectCard = ({ skills }: Props) => {
   )[0];
 
   return (
-    <div className='flex flex-col flex-shrink-0 group rounded-lg shadow-lg px-6 py-8 w-[320px] h-[370px] justify-between dark:bg-[#292929] cursor-pointer hover:-translate-y-2 transition ease-in duration-150 overflow-y-hidden'>
+    <div className='flex flex-col flex-shrink-0 group rounded-lg shadow-lg px-6 py-8 w-[300px] h-[340px] justify-between dark:bg-[#292929] cursor-pointer hover:-translate-y-2 transition ease-in duration-150 overflow-y-hidden'>
       <div>
         <div className='flex flex-row items-start justify-between'>
           <CiFolderOn className='h-12 w-12' />

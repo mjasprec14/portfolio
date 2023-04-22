@@ -9,7 +9,7 @@ type Props = {
 const WorkExperience = ({ experiences }: Props) => {
   return (
     <section id='experience'>
-      <div className='h-screen flex flex-col text-left overflow-hidden md:flex-row max-w-full md:px-10 justify-evenly items-center mx-auto'>
+      <div className='h-screen flex flex-col text-left md:flex-row max-w-full md:px-10 justify-evenly items-center mx-auto'>
         <div className='w-full flex space-x-5 overflow-x-scroll p-4 md:p-10 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/80'>
           {experiences?.map((experience) => (
             <div key={experience?._id}>
