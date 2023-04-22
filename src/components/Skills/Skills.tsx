@@ -14,17 +14,21 @@ const Skills = ({ skills }: Props) => {
     <section id='skills'>
       <div className='min-h-screen max-w-7xl flex flex-col justify-center items-center mx-auto'>
         <motion.div
-          variants={iconParent}
-          initial='initial'
-          whileInView='animate'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
           className='grid px-6 grid-cols-4 gap-3 md:px-0 md:grid-cols-6 md:gap-6'
         >
-          {skills.map((skill, idx) => (
-            <Icon
-              key={idx}
-              skill={skill}
-            />
-          ))}
+          {skills.map((skill, idx) => {
+            console.log(idx % 2 === 0);
+            return (
+              <Icon
+                key={idx}
+                skill={skill}
+                directionBottom={idx % 2 === 0}
+              />
+            );
+          })}
         </motion.div>
       </div>
     </section>
