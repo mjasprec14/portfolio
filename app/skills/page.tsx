@@ -23,7 +23,7 @@ const page = async () => {
   };
 };
 
-export default function Skills({}: Props) {
+export default function Skills() {
   const [data, setData] = useState<Props>();
 
   useEffect(() => {
