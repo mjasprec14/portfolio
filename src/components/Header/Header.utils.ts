@@ -1,15 +1,16 @@
 export const animationValues = [
   {
-    initial: { x: -200, scale: 0.5 },
+    initial: { x: -200, scale: 0.5, opacity: 0 },
     animate: {
       x: 0,
       scale: 1,
+      opacity: 1,
     },
     transition: { duration: 1 },
   },
   {
-    initial: { y: -200, scale: 0.5 },
-    animate: { y: 0, scale: 1 },
+    initial: { y: -200, scale: 0.5, opacity: 0 },
+    animate: { y: 0, scale: 1, opacity: 1 },
     transition: { duration: 1.5 },
   },
   {
