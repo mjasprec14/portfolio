@@ -20,6 +20,7 @@ import {
   WorkExperience,
   Footer,
   Projects,
+  Skills as SkillsComponent,
 } from '@/src/components';
 
 export default async function Home() {
@@ -40,6 +41,7 @@ export default async function Home() {
         projects={projects}
         skills={skills}
       />
+      <SkillsComponent skills={skills} />
       <Footer
         socials={socials}
         pageInfo={pageInfo}
