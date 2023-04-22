@@ -19,7 +19,7 @@ const About = ({ pageInfo }: Props) => {
         initial={{ y: 150, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className='h-screen max-w-7xl mx-auto flex flex-col px-8 items-center justify-center  md:space-y-0 md:justify-between md:px-20 md:flex-row'
+        className='min-h-screen max-w-7xl mx-auto flex flex-col px-8 items-center justify-center mb-48 md:space-y-0 md:justify-between md:px-20 md:flex-row'
       >
         <div className='w-full flex items-center justify-center pt-8 md:pt-0 md:w-1/2'>
           <Image
