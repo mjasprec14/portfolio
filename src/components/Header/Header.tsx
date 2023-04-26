@@ -40,7 +40,7 @@ const Header = ({ socials }: Props) => {
         <Link
           href='mailto:michaeljosephasprec@gmail.com'
           target='_blank'
-          className='mr-2'
+          className='hidden md:inline-flex mr-2'
         >
           <motion.i
             initial={{ opacity: 0, x: 200, scale: 0.5 }}
