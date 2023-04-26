@@ -30,7 +30,7 @@ const Footer = ({ socials, pageInfo }: Props) => {
         className='w-full md:h-1/6 grid md:grid-cols-3 md:items-center md:justify-between py-10 px-4 space-y-10 md:space-y-0 md:px-10 md:py-0'
       >
         <div className='text-center md:text-left space-y-2'>
-          <MdLocationPin className='h-10 w-10 animate-bounce text-red-500' />
+          <MdLocationPin className='h-10 w-10 animate-bounce text-red-500 mx-auto md:mx-0' />
 
           <p className='md:w-1/2 text-xs text-gray-400 uppercase tracking-[2px]'>
             {pageInfo?.address}
