@@ -54,7 +54,7 @@ const About = ({ pageInfo }: Props) => {
 
           <div className='flex'>
             <Link
-              href='/public/mjcv.pdf'
+              href={`${pageInfo.cvPDF}`}
               target='_blank'
               download={true}
               className='flex items-center bg-[rgb(36,36,36)] text-sm p-1.5 px-3 text-white/80 md:p-2.5 md:px-6 rounded-lg md:text-lg font-semibold hover:bg-white/80 hover:text-[rgb(36,36,36)] border-2 border-solid border-transparent hover:border-[rgb(36,36,36)] dark:border-2 dark:border-solid dark:border-white/80 transition space-x-2'
