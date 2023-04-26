@@ -23,8 +23,12 @@ export interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
+  cvPDF: PDF;
 }
 
+interface PDF {
+  _type: 'file';
+}
 export interface Experience extends SanityBody {
   _type: 'experience';
   company: string;
