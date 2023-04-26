@@ -57,5 +57,10 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'cvPDF',
+      title: 'CV PDF',
+      type: 'file',
+    }),
   ],
 });
